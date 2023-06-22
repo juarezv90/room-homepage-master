@@ -1,0 +1,52 @@
+html {
+  font-size: $font-size;
+  font-family: $family;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: $White;
+}
+
+a, a:hover {
+  color: $Black;
+  text-decoration: none;
+}
+
+.container {
+  min-width: 375px;
+  max-width: 1440px;
+  height: 800px;
+  margin: 0;
+  display: grid;
+  overflow: hidden;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  translate: -50% -50%;
+  
+  @include desktop{
+    grid-template-columns: 420px 420px 160px 440px;
+    grid-template-rows: 534px 266px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  color: $Dark-Gray;
+  font-size: 1.24rem;
+  line-height: 1.5rem;
+
+  @include desktop{
+    font-size: 1.35rem;
+  }
+}

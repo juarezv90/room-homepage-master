@@ -1,0 +1,20 @@
+//colors
+$Dark-Gray: hsl(0, 0%, 63%);
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$Very-Dark-Gray: hsl(0, 0%, 27%);
+
+//Font Settings
+$font-size: 12px;
+$family: "League Spartan", sans-serif;
+$wt500: 500;
+$wt600: 600;
+$wt700: 700;
+
+
+//mixins
+@mixin desktop {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
