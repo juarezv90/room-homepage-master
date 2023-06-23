@@ -65,11 +65,13 @@
 
   @include desktop {
     grid-column: 3/5;
-    padding: 7rem;
+    justify-content: flex-end;
+    padding: 8rem 7.2rem;
 
     h2{
       font-size: 4rem;
       line-height: 4rem;
+      font-weight: 600;
     }
     
 
@@ -80,8 +82,13 @@
       right: unset;
     }
 
+    .arrow {
+      height: 80px;
+    }
+
     a {
       font-size: 1.4rem;
+      margin-bottom: 6rem;
     }
   }
 }

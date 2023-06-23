@@ -17,7 +17,7 @@
 .aboutDetails {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
   padding: 3rem;
@@ -29,8 +29,20 @@
     font-weight: $wt700;
     margin-bottom: 1rem;
   }
+}
 
-  @include desktop {
+@include desktop {
+  .aboutDetails {
     grid-column: 2/4;
+    justify-content: center;
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .darkAboutImage, .lightAboutImage, .aboutDetails {
+    height: 88%;
   }
 }

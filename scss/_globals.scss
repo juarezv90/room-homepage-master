@@ -31,7 +31,7 @@ a, a:hover {
     width: 100%;
     margin: 0 auto;
     grid-template-columns: 420px 420px 160px 440px;
-    grid-template-rows: 534px 266px;
+    grid-template-rows: 534px 300px;
   }
 }
 
@@ -44,7 +44,8 @@ p {
   font-size: 1.24rem;
   line-height: 1.5rem;
 
-  @include desktop{
-    font-size: 1.35rem;
+  @include desktop {
+    font-size: 1.3rem;
+    line-height: 1.75rem;
   }
 }

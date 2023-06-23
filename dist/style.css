@@ -31,7 +31,7 @@ a, a:hover {
     width: 100%;
     margin: 0 auto;
     grid-template-columns: 420px 420px 160px 440px;
-    grid-template-rows: 534px 266px;
+    grid-template-rows: 534px 300px;
   }
 }
 
@@ -46,7 +46,8 @@ p {
 }
 @media (min-width: 1080px) {
   p {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -195,11 +196,13 @@ p {
 @media (min-width: 1080px) {
   #grid-box-two {
     grid-column: 3/5;
-    padding: 7rem;
+    justify-content: flex-end;
+    padding: 8rem 7.2rem;
   }
   #grid-box-two h2 {
     font-size: 4rem;
     line-height: 4rem;
+    font-weight: 600;
   }
   #grid-box-two .arrows {
     top: unset;
@@ -207,8 +210,12 @@ p {
     bottom: 0;
     right: unset;
   }
+  #grid-box-two .arrow {
+    height: 80px;
+  }
   #grid-box-two a {
     font-size: 1.4rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -231,7 +238,7 @@ p {
 .aboutDetails {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
   padding: 3rem;
@@ -243,8 +250,17 @@ p {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
 @media (min-width: 1080px) {
   .aboutDetails {
     grid-column: 2/4;
+    justify-content: center;
+  }
+  .aboutDetails h3 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+  .darkAboutImage, .lightAboutImage, .aboutDetails {
+    height: 88%;
   }
 }/*# sourceMappingURL=style.css.map */
