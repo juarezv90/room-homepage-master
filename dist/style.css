@@ -244,6 +244,7 @@ header #desktop-nav {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 @media (min-width: 1080px) {
   .aboutDetails {
