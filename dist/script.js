@@ -9,12 +9,24 @@ const items = {
     "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
     " Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.",
   ],
-  images: [
-    "../images/mobile-image-hero-1.jpg",
-    "../images/mobile-image-hero-2.jpg",
-    "../images/mobile-image-hero-3.jpg",
+  mobileImages: [
+    "./images/mobile-image-hero-1.jpg",
+    "./images/mobile-image-hero-2.jpg",
+    "./images/mobile-image-hero-3.jpg",
   ],
+  desktopImages: [
+    "./images/desktop-image-hero-1.jpg",
+    "./images/desktop-image-hero-2.jpg",
+    "./images/desktop-image-hero-3.jpg",
+  ]
 };
+
+let width = window.innerWidth;
+
+window.addEventListener("resize", () => {
+  width = this.innerWidth;
+})
+
 
 const leftTrigger = document.getElementById("leftArrow");
 const rightTrigger = document.getElementById("rightArrow");
@@ -22,23 +34,35 @@ const header = document.getElementById("header");
 
 let index = 0;
 
+let interval = setInterval(() => {
+  nextItem();
+}, 5000);
+
 const nextItem = () => {
   index = index < items.titles.length - 1 ? index + 1 : 0;
   document.getElementById("title").innerHTML = items.titles[index];
   document.getElementById("article").innerHTML = items.articles[index];
-  header.style.backgroundImage = `url(${items.images[index]})`;
+  header.style.backgroundImage = `url(${width < 500 ? items.mobileImages[index] : items.desktopImages[index]})`;
 };
 const prevItem = () => {
   index = index > 0 ? index - 1 : items.titles.length - 1;
   document.getElementById("title").innerHTML = items.titles[index];
   document.getElementById("article").innerHTML = items.articles[index];
-  header.style.backgroundImage = `url(${items.images[index]})`;
+  header.style.backgroundImage = `url(${width < 500 ? items.mobileImages[index] : items.desktopImages[index]})`;
 };
 
 rightTrigger.onclick = () => {
+  clearInterval(interval);
   nextItem();
+  interval = setInterval(() => {
+    nextItem();
+  }, 5000);
 };
 
 leftTrigger.onclick = () => {
+  clearInterval(interval);
   prevItem();
+  interval = setInterval(() => {
+    nextItem();
+  }, 5000);
 };

@@ -14,7 +14,7 @@ $wt700: 700;
 
 //mixins
 @mixin desktop {
-    @media (min-width: 768px) {
+    @media (min-width: 1080px) {
         @content;
     }
 }

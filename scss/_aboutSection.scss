@@ -28,4 +28,8 @@
         letter-spacing: .4rem;
         font-weight: $wt700;
     }
+
+    @include desktop {
+        grid-column: 2/4;
+    }
 }

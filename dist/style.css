@@ -25,14 +25,14 @@ a, a:hover {
   height: 800px;
   margin: 0;
   display: grid;
-  overflow: hidden;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   .container {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     grid-template-columns: 420px 420px 160px 440px;
     grid-template-rows: 534px 266px;
   }
@@ -47,7 +47,7 @@ p {
   font-size: 1.24rem;
   line-height: 1.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   p {
     font-size: 1.35rem;
   }
@@ -68,10 +68,9 @@ header nav {
   width: 100%;
   display: flex;
   align-items: center;
+  z-index: 20;
 }
-header nav h1 {
-  font-size: 3rem;
-  font-weight: 500;
+header nav .nav-header {
   margin: 0 auto;
 }
 header nav #mobile-menu {
@@ -104,7 +103,7 @@ header nav #mobile-menu::before {
 header #desktop-nav {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   header {
     color: hsl(0, 0%, 100%);
     grid-row: 1/2;
@@ -119,8 +118,7 @@ header #desktop-nav {
     width: 100%;
     padding: 4rem;
   }
-  header nav h1 {
-    font-size: 4rem;
+  header nav .nav-header {
     margin: 0;
     margin-right: 2rem;
   }
@@ -197,7 +195,7 @@ header #desktop-nav {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   #grid-box-two {
     grid-column: 3/5;
     padding: 7rem;
@@ -246,4 +244,9 @@ header #desktop-nav {
   text-transform: uppercase;
   letter-spacing: 0.4rem;
   font-weight: 700;
+}
+@media (min-width: 1080px) {
+  .aboutDetails {
+    grid-column: 2/4;
+  }
 }/*# sourceMappingURL=style.css.map */
