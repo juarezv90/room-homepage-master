@@ -80,4 +80,4 @@ document.getElementById('grid-box-two').addEventListener("wheel", (e) => {
   } else if (e.deltaY > 0) {
     handleNext()
   }
-});
+}, {passive: true});

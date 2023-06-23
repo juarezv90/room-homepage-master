@@ -25,14 +25,11 @@ a, a:hover {
   height: 800px;
   margin: 0;
   display: grid;
-  position: absolute;
 }
 @media (min-width: 1080px) {
   .container {
     width: 100%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    margin: 0 auto;
     grid-template-columns: 420px 420px 160px 440px;
     grid-template-rows: 534px 266px;
   }
