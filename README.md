@@ -13,8 +13,6 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 This project utilizes grid display to align item for desktop version. The grid is set to column
